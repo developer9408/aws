@@ -8,7 +8,9 @@ import sys
 import time
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+
+tf.disable_eager_execution()
 
 def load_graph(model_file):
   graph = tf.Graph()
